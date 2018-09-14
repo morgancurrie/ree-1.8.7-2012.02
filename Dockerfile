@@ -40,6 +40,8 @@ RUN cd /usr/src && \
   patch -p1 < p358-p374.patch ; \
   wget 'https://github.com/wayneeseguin/rvm/raw/master/patches/ruby/GH-488.patch' && \
   patch -p1 < GH-488.patch && \
+  wget 'https://gist.githubusercontent.com/morgancurrie/e5a7f74a6f4e83dbfc67e04f677a79a3/raw/40f0a7d76c58bd36d97314a1afeff9ed2acd2143/ree_openssl_tls_1.2.patch' && \
+  patch -p1 < ree_openssl_tls_1.2.patch && \
   cd .. && \
   ./installer --auto /usr/local --dont-install-useful-gems && \
   echo "RUBY_HEAP_MIN_SLOTS=600000\nRUBY_HEAP_SLOTS_INCREMENT=10000\nRUBY_HEAP_SLOTS_GROWTH_FACTOR=1.8\nRUBY_GC_MALLOC_LIMIT=59000000\nRUBY_HEAP_FREE_MIN=100000" >> /etc/environment
