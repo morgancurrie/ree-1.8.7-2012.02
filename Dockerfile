@@ -25,7 +25,7 @@ RUN apt-get update && \
       libxslt-dev
 
 RUN cd /usr/src && \
-  wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2012.02.tar.gz && \
+  wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/rubyenterpriseedition/ruby-enterprise-1.8.7-2012.02.tar.gz && \
   tar xzf ruby-enterprise-1.8.7-2012.02.tar.gz && \
   cd /usr/src/ruby-enterprise-1.8.7-2012.02/source && \
   wget 'https://github.com/wayneeseguin/rvm/raw/master/patches/ree/1.8.7/tcmalloc.patch' && \
